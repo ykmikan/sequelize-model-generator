@@ -1,18 +1,17 @@
-import fs from 'fs'
-import path from 'path'
-import Sequelize from 'sequelize'
-import lodash from 'lodash'
-import co from 'co'
-import _ from 'underscore'
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
+const lodash = require('lodash');
+const co = require('co');
+const _ = require('underscore');
 
 class ModelGenerater {
-
     constructor(dir, dbConfig) {
         this.dir = dir
-        this.sequelize = new Sequelize(dbConfig.db, dbConfig.username, dbConfig.password, {
+        this.sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, {
             host: dbConfig.host,
-            dialect: 'postgres',
-            port: '3306',
+            dialect: dbConfig.adapter,
+            port: dbConfig.port,
             omitNull: true
         })
     }
