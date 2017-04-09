@@ -1,0 +1,19 @@
+{
+  "name": "sequelize-model-generator",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ykmikan",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.4",
+    "path": "^0.12.7",
+    "sequelize": "^3.30.4",
+    "underscore": "^1.8.3"
+  }
+}
